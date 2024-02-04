@@ -2,7 +2,7 @@
 // App.jsx
 
 import './App.css';
-import Counter from './components/COunter';
+import Counter from './components/Counter';
 import React, { useState } from 'react';
 
 function App() {
