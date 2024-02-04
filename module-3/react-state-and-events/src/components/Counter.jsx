@@ -1,0 +1,22 @@
+/* eslint-disable no-unused-vars */
+// ./src/components/Counter.jsx
+
+import React, { useState } from 'react';
+ 
+function Counter() {
+  const [count, setCount] = useState(0);
+ 
+  return (
+    <div className="Counter">
+      <h2>Counter</h2>
+ 
+      <p>You clicked {count} times</p>
+ 
+      <button onClick={() => setCount((prevCount) => prevCount - 1)}> - </button>
+      <button onClick={() => setCount((prevCount) => prevCount + 1)}> + </button>
+    </div>
+  );
+}
+ 
+export default Counter;
+
