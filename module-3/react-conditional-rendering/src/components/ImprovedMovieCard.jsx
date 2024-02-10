@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 // src/components/ImprovedMovieCard.jsx
 
-import React from 'react';
+import React from "react";
 
 function ImprovedMovieCard(props) {
   const { movie, clickToDelete } = props;
@@ -23,10 +23,14 @@ function ImprovedMovieCard(props) {
       <p>Director: {movie.director}</p>
       <p>IMDB Rating: {generateScoreLabel(movie.IMDBRating)}</p>
 
-      {movie.hasOscars ? <p>Got the Oscar Award! </p> : <p>Great movie but no Oscars!</p>}
+      {movie.hasOscars ? (
+        <p>Got the Oscar Award! </p>
+      ) : (
+        <p>Great movie but no Oscars!</p>
+      )}
 
       <button onClick={() => clickToDelete(movie._id)} className="btn-delete">
-        Delete 
+        Delete
       </button>
     </div>
   );

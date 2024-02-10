@@ -2,13 +2,12 @@
 // ./src/components/StudentList.jsx
 
 function StudentList(props) {
-    return (
-      <div>
-        <h2>Student List</h2>
-        {props.children}
-      </div>
-    );
-  }
-  
-  export default StudentList;
-  
+  return (
+    <div>
+      <h2>Student List</h2>
+      {props.children}
+    </div>
+  );
+}
+
+export default StudentList;

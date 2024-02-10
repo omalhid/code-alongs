@@ -1,14 +1,14 @@
-import './App.css'
+import "./App.css";
 // App.jsx
 // ... previous imports stay unchanged
 
 // import ReactPlayer from the npm package
-import ReactPlayer from 'react-player';
+import ReactPlayer from "react-player";
 
 function App() {
   return (
     <div className="App">
-    {/* ... no changes here ... */}
+      {/* ... no changes here ... */}
 
       <ReactPlayer url="https://vimeo.com/channels/top/22439234" />
 
@@ -25,4 +25,3 @@ function App() {
 }
 
 export default App;
-

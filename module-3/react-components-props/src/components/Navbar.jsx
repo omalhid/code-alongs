@@ -1,7 +1,7 @@
 // ./src/components/Navbar.jsx
 
-import React from 'react';
-import Button from './Button';
+import React from "react";
+import Button from "./Button";
 
 class Navbar extends React.Component {
   render() {
