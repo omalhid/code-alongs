@@ -1,24 +1,29 @@
-// src/pages/ProjectsPage.jsx
+// ./src/pages/ProjectsPage.jsx
 
 import { useState, useEffect } from "react";
-import projectsData from "./../projects-data.json";
+// import projectsData from "./../projects-data.json";  // <== REMOVE
+import { Link } from "react-router-dom";
 
-function ProjectsPage() {
+function ProjectsPage(props) {
+  // <== UPDATE
   const [projects, setProjects] = useState([]);
 
-  // This effect will run only once on the initial render.
-  // To do it we set the dependency array empty [].
+  // This effect depends on `props.projects`.
+  // It will run on the initial render and every time
+  // when the `props.projects` updates.
   useEffect(() => {
-    setProjects(projectsData);
-  }, []);
+    setProjects(props.projects); // <== UPDATE
+  }, [props.projects]); // <== UPDATE
 
   return (
     <div>
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       {projects.map((project) => {
         return (
-          <div key={project.id} className="project">
-            <h3>{project.name}</h3>
+          <div key={project._id} className="project">
+            <h3>
+              <Link to={`/projects/${project._id}`}>{project.name}</Link>
+            </h3>
             <p>{project.technologies}</p>
           </div>
         );
